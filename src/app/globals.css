@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.event-pill {
+  @apply text-xs px-2 py-0.5 rounded-full truncate cursor-pointer font-medium transition-opacity hover:opacity-80;
+}
+
+.calendar-day {
+  @apply min-h-[100px] p-1 border-r border-b border-gray-200 relative;
+}
+
+@media (max-width: 640px) {
+  .calendar-day {
+    min-height: 70px;
+  }
+}
